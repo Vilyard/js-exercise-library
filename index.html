@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="header">
+      <header class="header">
         <h1>Library</h1>
-      </div>
+      </header>
       <div class="book-conainter">
-        <button class="btn btn-add">Add Book</button>
-        <div class="books-grid"></div>
+        <button class="btn btn-add" id="addBookBtn">Add Book</button>
+        <div class="books-grid" id="booksGrid"></div>
       </div>
       <footer class="footer">
         Copyright ©
@@ -23,7 +22,42 @@
         </script>
         Vilyard
       </footer>
+      <div class="modal" id="addBookModal">
+        <form class="add-book-form" id="addBookForm">
+            <h3>Add new book</h3>
+            <input
+            class="input"
+            type="text"
+            id="title"
+            placeholder="Title"
+            required
+            maxlength="100"
+            />
+            <p class="error-msg" id="errorMsg"></p>
+            <input
+            class="input"
+            type="text"
+            id="author"
+            placeholder="Author"
+            required
+            maxlength="100"
+            />
+            <input
+            class="input"
+            type="number"
+            id="pages"
+            placeholder="Pages"
+            required
+            max="10000"
+            />
+            <div class = "is-read">
+                <label for="is-read">Have you read it?</label>
+                <input type="checkbox" class="checkbox" id="isRead" />
+            </div>
+            <button class="btn btn-light-green" type="submit">Submit</button>
+        </form>
+        <div class="overlay" id="overlay"></div>
+      </div>
       <script src="script.js"></script>
-    </div>
   </body>
 </html>

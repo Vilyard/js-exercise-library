@@ -36,3 +36,11 @@ class Library {
   }
 }
 const library = new Library();
+
+
+const addBookBtn = document.getElementById('addBookBtn')
+const addBookModal = document.getElementById('addBookModal')
+const errorMsg = document.getElementById("errorMsg")
+const overlay = document.getElementById("overlay")
+const addBookForm = document.getElementById('addBookForm')
+const booksGrid = document.getElementById("addBooksGrid")
