@@ -12,6 +12,11 @@ class Book{
     }
 }
 
+class Library {
+    constructor() {
+        this.books = [];
+    }
+}
 
 function addBookToLibrary() {
 
